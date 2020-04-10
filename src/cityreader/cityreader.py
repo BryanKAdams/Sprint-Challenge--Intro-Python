@@ -77,22 +77,22 @@ for c in cities:
 
 # TODO Get latitude and longitude values from the user
 
-values1 = input("Input lat start and lon start: ").split(",")
-values2 = input("Input lat end and lon end: ").split(",")
+# values1 = input("Input lat start and lon start: ").split(",")
+# values2 = input("Input lat end and lon end: ").split(",")
 
-floatValues1 = [float(value) for value in values1]
-floatValues2 = [float(value) for value in values2]
+# floatValues1 = [float(value) for value in values1]
+# floatValues2 = [float(value) for value in values2]
 
-print(floatValues1)
-print(floatValues2)
+# print(floatValues1)
+# print(floatValues2)
 
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
-    within = [city.name for city in cities if(
+    within = [city for city in cities if(
         city.lat <= lat1 and city.lat >= lat2 and city.lon <= lon1 and city.lon >= lon2) or (city.lat >= lat1 and city.lat <= lat2 and city.lon >= lon1 and city.lon <= lon2)]
 
     return within
 
 
-print(cityreader_stretch(
-    floatValues1[0], floatValues1[1], floatValues2[0], floatValues2[1], cities))
+# print(cityreader_stretch(
+#     floatValues1[0], floatValues1[1], floatValues2[0], floatValues2[1], cities))
